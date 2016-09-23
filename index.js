@@ -62,7 +62,33 @@ controller.hears(['attachment'], ['direct_message', 'direct_mention'], function 
     image_url: 'https://storage.googleapis.com/beepboophq/_assets/bot-1.22f6fb.png',
     title_link: 'https://beepboophq.com/',
     text: text,
-    color: '#7CD197'
+    color: '#7CD197',
+    "actions": [
+                {
+                    "name": "chess",
+                    "text": "Chess",
+                    "type": "button",
+                    "value": "chess"
+                },
+                {
+                    "name": "maze",
+                    "text": "Falken's Maze",
+                    "type": "button",
+                    "value": "maze"
+                },
+                {
+                    "name": "war",
+                    "text": "Thermonuclear War",
+                    "style": "danger",
+                    "type": "button",
+                    "value": "war",
+                    "confirm": {
+                        "title": "Are you sure?",
+                        "text": "Wouldn't you prefer a good game of chess?",
+                        "ok_text": "Yes",
+                        "dismiss_text": "No"
+                    }
+                }]
   }]
 
   bot.reply(message, {
